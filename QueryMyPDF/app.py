@@ -11,6 +11,7 @@ from langchain.chains.retrieval import create_retrieval_chain
 from langchain.chains.combine_documents.stuff import create_stuff_documents_chain
 from langchain_pinecone import PineconeVectorStore
 from pinecone import Pinecone
+import os
 
 
 HF_TOKEN = st.secrets["HF_TOKEN"]
@@ -19,6 +20,7 @@ PINECONE_INDEX_NAME = st.secrets["PINECONE_INDEX_NAME"]
 PINECONE_ENVIRONMENT = st.secrets.get("PINECONE_ENVIRONMENT", "us-east-1")
 
 # Embeddings
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = HF_TOKEN
 embeddings = HuggingFaceEmbeddings(
     model_name="sentence-transformers/all-MiniLM-L6-v2",
     cache_folder="./models",
@@ -101,3 +103,4 @@ if api_key:
 else:
 
     st.warning("Please enter the Groq API Key.")
+
