@@ -23,7 +23,7 @@ PINECONE_ENVIRONMENT = st.secrets.get("PINECONE_ENVIRONMENT", "us-east-1")
 embeddings = HuggingFaceEmbeddings(
     model_name="sentence-transformers/all-MiniLM-L6-v2",
     cache_folder="./models",
-    huggingfacehub_api_token=HF_TOKEN
+    huggingfacehub_api_token=st.secrets["HF_TOKEN"]
 )
 
 # Streamlit UI
@@ -102,5 +102,6 @@ if api_key:
 else:
 
     st.warning("Please enter the Groq API Key.")
+
 
 
