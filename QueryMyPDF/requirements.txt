@@ -1,4 +1,4 @@
-langchain
+elangchain
 ipykernel
 python-dotenv
 langchain_community
@@ -26,6 +26,8 @@ sse_starlette
 ddgs
 pinecone
 langchain_pinecone
+sentence-transformers
+
 
 
 
