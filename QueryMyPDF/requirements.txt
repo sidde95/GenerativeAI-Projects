@@ -25,9 +25,7 @@ langserve
 sse_starlette
 ddgs
 pinecone
-pinecone-client
-pinecone-text
-pinecone-notebooks
 langchain_pinecone
+
 
 
