@@ -19,7 +19,11 @@ PINECONE_INDEX_NAME = st.secrets["PINECONE_INDEX_NAME"]
 PINECONE_ENVIRONMENT = st.secrets.get("PINECONE_ENVIRONMENT", "us-east-1")
 
 # Embeddings
-embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+embeddings = HuggingFaceEmbeddings(
+    model_name="sentence-transformers/all-MiniLM-L6-v2",
+    cache_folder="./models",
+    huggingfacehub_api_token=HF_TOKEN
+)
 
 # Streamlit UI
 st.title("Hybrid Search RAG Q&A with PDF")
@@ -95,4 +99,5 @@ if api_key:
             st.write("Chat History:", session_history.messages)
 
 else:
+
     st.warning("Please enter the Groq API Key.")
