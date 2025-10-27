@@ -26,7 +26,8 @@ sse_starlette
 ddgs
 pinecone
 langchain_pinecone
-sentence-transformers
+sentence_transformers
+
 
 
 
