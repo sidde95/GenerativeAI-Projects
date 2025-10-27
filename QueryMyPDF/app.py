@@ -14,13 +14,12 @@ from pinecone import Pinecone
 import os
 
 
-HF_TOKEN = st.secrets["HF_TOKEN"]
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = st.secrets["HF_TOKEN"]
 PINECONE_API_KEY = st.secrets["PINECONE_API_KEY"]
 PINECONE_INDEX_NAME = st.secrets["PINECONE_INDEX_NAME"]
 PINECONE_ENVIRONMENT = st.secrets.get("PINECONE_ENVIRONMENT", "us-east-1")
 
 # Embeddings
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = HF_TOKEN
 embeddings = HuggingFaceEmbeddings(
     model_name="sentence-transformers/all-MiniLM-L6-v2",
     cache_folder="./models",
@@ -103,4 +102,5 @@ if api_key:
 else:
 
     st.warning("Please enter the Groq API Key.")
+
 
