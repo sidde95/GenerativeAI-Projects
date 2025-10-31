@@ -7,7 +7,7 @@ from langchain_groq import ChatGroq
 from langgraph.graph import StateGraph, START, END
 
 
-os.environ["GROQ_API_KEY"] = st.secrets("GROQ_API_KEY")
+os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
 
 # Initialize Groq LLM
 llm = ChatGroq(model="llama-3.1-8b-instant")
