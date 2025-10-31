@@ -5,8 +5,7 @@ from typing_extensions import TypedDict
 from typing import Annotated
 from langchain_groq import ChatGroq
 from langgraph.graph import StateGraph, START, END
-from dotenv import load_dotenv
-load_dotenv()
+
 
 os.environ["GROQ_API_KEY"] = st.secrets("GROQ_API_KEY")
 
