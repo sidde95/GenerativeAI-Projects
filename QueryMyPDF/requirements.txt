@@ -8,7 +8,7 @@ sse_starlette
 crewai
 crewai-tools
 
-langchain
+langchain==0.3.27
 langchain-core
 langchain-community
 langchain-huggingface
