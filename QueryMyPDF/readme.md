@@ -1,5 +1,8 @@
 # QueryMyPDF
 
+**Deployed on Streamlit:** [View Live App](https://generativeai-projects-mhq9b5xdbndtxzijqxhfts.streamlit.app/)
+
+
 **QueryMyPDF** is an AI-powered application built using **LangChain**, **Groq**, **Pinecone**, and **Streamlit**. It allows users to upload one or multiple PDF documents and interactively query their content through a chat-based interface. The app leverages a **Hybrid RAG (Retrieval-Augmented Generation)** pipeline to combine document retrieval with generative responses.
 
 ---
