@@ -1,3 +1,14 @@
+# ========== SENSITIVE / SECRETS ==========
+.env
+.env.local
+.env.*.local
+secrets.toml
+.streamlit/secrets.toml
+
+# ========== GIT / REPO ==========
+GenerativeAI-Projects/
+.git/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -31,9 +42,17 @@ env/
 
 # VS Code settings
 .vscode/
+*.code-workspace
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
 
 # Pytest
 .cache/
+.pytest_cache/
 
 # Jupyter Notebook
 .ipynb_checkpoints
@@ -65,10 +84,20 @@ outputs/logs/
 
 # Data outputs
 outputs/reports/
+outputs/*.json
+outputs/nested/
+
+# Temp files (Excel, Office)
+~$*
+*.tmp
 
 # OS files
 .DS_Store
 Thumbs.db
+*.lnk
+
+# Streamlit
+.streamlit/cache/
 
 # Other
 *.bak
