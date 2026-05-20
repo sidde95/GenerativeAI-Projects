@@ -1,0 +1,105 @@
+# ========== SENSITIVE / SECRETS ==========
+.env
+.env.local
+.env.*.local
+secrets.toml
+.streamlit/secrets.toml
+
+# ========== GIT / REPO ==========
+GenerativeAI-Projects/
+.git/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# VS Code settings
+.vscode/
+*.code-workspace
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# Pytest
+.cache/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# mypy
+.mypy_cache/
+.dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Pytype
+.pytype/
+
+# Coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Logs
+*.log
+outputs/logs/
+
+# Data outputs
+outputs/reports/
+outputs/*.json
+outputs/nested/
+
+# Temp files (Excel, Office)
+~$*
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+*.lnk
+
+# Streamlit
+.streamlit/cache/
+
+# Other
+*.bak
+*.swp
+*.tmp
